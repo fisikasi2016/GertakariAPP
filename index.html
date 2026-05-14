@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7b3f00" />
+  <meta name="description" content="Historia kronologia ariketa interaktiboa, offline erabil daitekeen PWA moduan." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Kronologia" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Kronologia ariketa | Historia</title>
+</head>
+<body>
+<header>
+    <h1>Kronologia lerroa</h1>
+    <p class="azpi">Ordenatu bost gertakari historikoak zaharrenetik berrienera. Txartelak biratu etapa eta gaia ikusteko, eta urteak banaka desestali.</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div>
+        <button class="hirugarren" id="berria">Sortu ariketa berria</button>
+        <button class="bigarren" id="gaiakBtn">Gai guztiak ikusi</button>
+        <button class="ghost" id="installBtn" hidden>Instalatu app-a</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section>
+        <h2>Txartelak</h2>
+        <p class="hint">Arrastatu txartelak denbora-lerrora. Mugikorrean, hautatu txartela eta ukitu kokalekua. Klik bikoitza edo “Biratu” botoia erabilita atzeko aldea ikusiko duzu.</p>
+        <div class="biltegia" id="biltegia"></div>
+      </section>
+
+      <section>
+        <h2>Denbora-lerroa</h2>
+        <div class="denbora" id="denbora"></div>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="hirugarren" id="nola">Nola noa?</button>
+          <button class="bigarren" id="ikusi">Emaitza ikusi</button>
+          <button class="ghost" id="garbitu">Lerroa garbitu</button>
+        </div>
+        <div class="emaitza" id="emaitza"></div>
+      </section>
+    </div>
+  </main>
+
+  <noscript>JavaScript aktibatu behar duzu kronologia ariketa erabiltzeko.</noscript>
+
+  <dialog id="gaiakDialog">
+    <div class="modalburua">
+      <strong>Ikasturteko gaiak</strong>
+      <button class="ghost" id="itxi">Itxi</button>
+    </div>
+    <div class="modalgorputza">
+      <ol id="gaiakLista"></ol>
+    </div>
+  </dialog>
+  
+  <footer class="footer-licencia">
+  <img src="assets/logo.png" alt="Fisikasi logoa" class="footer-logo">
+
+  <p>
+    Lan hau @Fisikasi-rena da, eta
+    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.eu" target="_blank">
+      Creative Commons Aitortu–EzKomertziala 4.0 (CC BY-NC 4.0)
+    </a>
+    lizentziapean dago.
+  </p>
+</footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
